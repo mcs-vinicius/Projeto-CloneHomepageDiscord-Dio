@@ -1,0 +1,256 @@
+@import url(./Assets/fonts/LuckiestGuy-Regular.ttf);
+        
+body {
+    font-family: Luckiest Guy;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4, 400px) 750px 100px;
+    grid-template-areas: 
+    "header header" 
+    "content-1 content-1" 
+    "content-2 content-2" 
+    "content-3 content-3" 
+    "content-4 content-4"
+    "footer footer";
+}
+header{
+    background-image: url(../img/Header\ Background.png);
+    object-fit: contain;
+    background-size: cover;
+    width: 100%;
+    grid-area: header;
+}
+.container-header{
+    padding: 20px;
+}
+h1{
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+}
+header p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+}
+.container-button{
+    display: flex;
+    gap: 20px;
+    margin: auto;
+}
+.button-download{
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px;
+    border: 0px solid rgb(165, 142, 142);
+    color: black;
+    
+}
+nav a .button-download :hover{
+    background-color: black;
+    color: aqua;
+}
+
+
+.button-web{
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(24, 23, 23);
+    border: 0px solid black;
+    color: white;
+}
+.button-web :hover{
+    background-color: bisque;
+}
+
+.container-header{
+    flex-direction: row;
+    margin: 20px auto;
+    width: 500px;
+    justify-content: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content-1{
+    grid-area: content-1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 50px;
+}
+.content-1 div{
+    width: 300px;
+}
+.content-2{
+    grid-area: content-2;
+    background-color: #F6F6F6;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.content-2 div{
+    width: 300px;
+}
+.content-3{
+    padding: 10px;
+    grid-area: content-3;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.content-3 div{
+    width: 300px;
+}
+.content-4{
+    grid-area: content-4;
+    margin-bottom: 50px;
+    background-color: #F6F6F6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.content-4 div{
+    margin: auto;
+    width: 800px;
+    height: auto;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    height: 100%;
+    text-align: center;
+}
+footer img{
+    display: flex;
+    margin: 30px auto;
+    width: 150px;
+}
+.content-text{
+    text-align: center;
+    width: 300px;
+}
+
+@media screen and (max-width: 430px ) {
+    body {
+        width: 430px;
+        grid-template-rows: repeat(5, 500px) 100px;
+        margin: 0;
+        
+    }
+    
+    header{
+        flex-direction: column;
+        width: 100%;
+        margin: 16px auto;
+
+    }
+    .container-header{
+        margin: 0;
+        width: 80%;
+    }
+    h1{
+        text-align: left;
+    }
+    .container-button{
+        flex-direction: column;
+        width: 80%;
+    }
+    .button-download{
+        border-radius: 20px;
+        padding: 15px 30px 15px 30px;
+        border: 0px solid white;
+    }
+    .button-web{
+        border-radius: 20px;
+        padding: 15px 30px 15px 30px;
+        background-color: rgb(24, 23, 23);
+        color: white;
+        border: 0px solid black;
+    }
+    .content-1{
+        flex-direction: column;
+        width: 430px;
+    }
+    .content-2{
+        flex-direction: column-reverse;
+        width: 430px;
+    }
+    .content-3{
+        flex-direction: column-reverse;
+        width: 430px;
+    }
+    .content-4{
+        width: 90%;
+    }
+    
+    section div{
+        margin: auto;
+        text-align: center;
+        padding-bottom: 20px;
+        gap: 20px;
+    }
+    img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 920px){
+    body {
+        width: 920px;
+        grid-template-rows: 350px repeat(4, 600px) 100px;
+        margin: 0;
+        
+    }
+    
+    .content-1{
+        flex-direction: column;
+        width: 600px;
+        margin: auto;
+    }
+    .content-1 div{
+        flex-direction: column;
+        width: 600px;
+        text-align: center;
+    }
+
+    .content-2{
+        flex-direction: column-reverse;
+        width: 600px;
+        margin: auto;
+    }
+    .content-2 div{
+        flex-direction: column;
+        width: 600px;
+        text-align: center;
+    }
+
+    .content-3{
+        flex-direction: column-reverse;
+        width: 600px;
+        margin: auto;
+    }
+    .content-3 div{
+        flex-direction: column;
+        width: 600px;
+        text-align: center;
+    }
+    .content-4{
+        width: 90%;
+        justify-content: center;
+    }
+    img{
+        width: 80%;
+    }
+    section div{
+        margin: auto;
+        text-align: center;
+        padding-bottom: 20px;
+        gap: 20px;
+    }
+}
